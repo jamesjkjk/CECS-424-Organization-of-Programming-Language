@@ -1,0 +1,23 @@
+Write a Ruby program to partition an array.  Read in n values to an array, and 
+a test value x.   Rearrange the array, so that the elements up to and 
+including index p are <= x and the elements from p+1 to n are > x.  Elements 
+may be repeated. The test value, x, may be larger than all values or smaller 
+than all values or in between somewhere.  You may only visit each element 
+once, and may not copy it to another array. For each test case show the input 
+array, the output array, and the partition index, p.  For example, given
+28 26 25 11 16 12 24 29 6 10   with test 17 the result might be
+10 6 12 11 16 25 24 29 26 28 with partition index 4.
+Turn in a hard copy of the program with a listing of several good test cases including test values larger and smaller than the data. 
+
+An outline of an algorithm is:
+
+Start with markers at each end.  Move markers towards each other until a 
+wrongly placed pair is encountered.  Allow for x being outside the range of 
+array values.
+
+While the two markers have not crossed over
+a. 	exchange the wrongly placed pair and move both markers inward by one.
+b. 	extend the left marker while elements are less than or equal to x.
+c. 	extend the right marker while elements are greater than x.
+
+Return the partition index p and the partitioned array. 
